@@ -17,7 +17,7 @@
         document.onclick = clickarPantalla;
     }
 
-    window.onload = inicio;
+    document.addEventListener("DOMContentLoaded", inicio);
 
     let clickarPantalla = function (evento) {
         let alturaTotal = window.innerHeight;
