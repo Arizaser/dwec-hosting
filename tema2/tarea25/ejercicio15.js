@@ -28,7 +28,7 @@ Figura 6.3 El color de fondo del cuadro de información cambia en función del t
 
 	}
 
-	window.onload = inicio;
+	document.addEventListener("DOMContentLoaded", inicio);
 
 	let moverRaton = function (evento) {
 		document.getElementById('info').style.backgroundColor = '#FFFFFF';
