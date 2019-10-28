@@ -9,49 +9,52 @@
  * @author Manuel Ariza Serrano
  * 
  */
+{
+    function muestraOculta1() {
+        let parrafo = document.getElementById("contenidos_1");
+        let enlace = document.getElementById("enlace_1");
 
-function muestraOculta1() {
-    let parrafo = document.getElementById("contenidos_1");
-    let enlace = document.getElementById("enlace_1");
+        if (parrafo.style.display == "" || parrafo.style.display == "block") {
+            parrafo.style.display = "none";
+            enlace.innerHTML = "Volver a mostrar";
+        } else {
+            parrafo.style.display = "block";
+            enlace.innerHTML = "Mostrar parrafo";
+        }
 
-    if (parrafo.style.display == "" || parrafo.style.display == "block") {
-        parrafo.style.display = "none";
-        enlace.innerHTML = "Volver a mostrar";
-    } else {
-        parrafo.style.display = "block";
-        enlace.innerHTML = "Mostrar parrafo";
+    }
+    function muestraOculta2() {
+        let parrafo = document.getElementById("contenidos_2");
+        let enlace = document.getElementById("enlace_2");
+
+        if (parrafo.style.display == "" || parrafo.style.display == "block") {
+            parrafo.style.display = "none";
+            enlace.innerHTML = "Volver a mostrar";
+        } else {
+            parrafo.style.display = "block";
+            enlace.innerHTML = "Mostrar parrafo";
+        }
+
+    }
+    function muestraOculta3() {
+        let parrafo = document.getElementById("contenidos_3");
+        let enlace = document.getElementById("enlace_3");
+
+        if (parrafo.style.display == "" || parrafo.style.display == "block") {
+            parrafo.style.display = "none";
+            enlace.innerHTML = "Volver a mostrar";
+        } else {
+            parrafo.style.display = "block";
+            enlace.innerHTML = "Mostrar parrafo";
+        }
+
     }
 
-}
-function muestraOculta2() {
-    let parrafo = document.getElementById("contenidos_2");
-    let enlace = document.getElementById("enlace_2");
-
-    if (parrafo.style.display == "" || parrafo.style.display == "block") {
-        parrafo.style.display = "none";
-        enlace.innerHTML = "Volver a mostrar";
-    } else {
-        parrafo.style.display = "block";
-        enlace.innerHTML = "Mostrar parrafo";
+    let inicio = function () {
+        document.getElementById("enlace_1").onclick = muestraOculta1;
+        document.getElementById("enlace_2").onclick = muestraOculta2;
+        document.getElementById("enlace_3").onclick = muestraOculta3;
     }
 
-}
-function muestraOculta3() {
-    let parrafo = document.getElementById("contenidos_3");
-    let enlace = document.getElementById("enlace_3");
-
-    if (parrafo.style.display == "" || parrafo.style.display == "block") {
-        parrafo.style.display = "none";
-        enlace.innerHTML = "Volver a mostrar";
-    } else {
-        parrafo.style.display = "block";
-        enlace.innerHTML = "Mostrar parrafo";
-    }
-
-}
-
-window.onload = function () {
-    document.getElementById("enlace_1").onclick = muestraOculta1;
-    document.getElementById("enlace_2").onclick = muestraOculta2;
-    document.getElementById("enlace_3").onclick = muestraOculta3;
+    document.addEventListener("DOMContentLoaded", inicio);
 }
